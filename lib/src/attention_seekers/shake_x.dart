@@ -48,47 +48,47 @@ class _ShakeXState extends State<ShakeX> with SingleTickerProviderStateMixin {
     matrix
         .tween(
           'x',
-          Tween(begin: 0.0, end: -10),
+          Tween(begin: 0.0, end: -10.0),
           duration: Duration(milliseconds: (durationMill * 0.10).round()),
         )
         .thenTween(
           'x',
-          Tween(begin: -10.0, end: 10),
+          Tween(begin: -10.0, end: 10.0),
           duration: Duration(milliseconds: (durationMill * 0.10).round()),
         )
         .thenTween(
           'x',
-          Tween(begin: 10.0, end: -10),
+          Tween(begin: 10.0, end: -10.0),
           duration: Duration(milliseconds: (durationMill * 0.10).round()),
         )
         .thenTween(
           'x',
-          Tween(begin: -10.0, end: 10),
+          Tween(begin: -10.0, end: 10.0),
           duration: Duration(milliseconds: (durationMill * 0.10).round()),
         )
         .thenTween(
           'x',
-          Tween(begin: 10.0, end: -10),
+          Tween(begin: 10.0, end: -10.0),
           duration: Duration(milliseconds: (durationMill * 0.10).round()),
         )
         .thenTween(
           'x',
-          Tween(begin: -10.0, end: 10),
+          Tween(begin: -10.0, end: 10.0),
           duration: Duration(milliseconds: (durationMill * 0.10).round()),
         )
         .thenTween(
           'x',
-          Tween(begin: 10.0, end: -10),
+          Tween(begin: 10.0, end: -10.0),
           duration: Duration(milliseconds: (durationMill * 0.10).round()),
         )
         .thenTween(
           'x',
-          Tween(begin: -10.0, end: 10),
+          Tween(begin: -10.0, end: 10.0),
           duration: Duration(milliseconds: (durationMill * 0.10).round()),
         )
         .thenTween(
           'x',
-          Tween(begin: 10.0, end: -10),
+          Tween(begin: 10.0, end: -10.0),
           duration: Duration(milliseconds: (durationMill * 0.10).round()),
         )
         .thenTween(

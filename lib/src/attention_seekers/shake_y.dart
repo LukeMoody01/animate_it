@@ -45,51 +45,50 @@ class _ShakeYState extends State<ShakeY> with SingleTickerProviderStateMixin {
     final durationMill = widget.duration.inMilliseconds;
 
     matrix = MovieTween();
-
     matrix
         .tween(
           'y',
-          Tween(begin: 0.0, end: -10),
+          Tween(begin: 0.0, end: -10.0),
           duration: Duration(milliseconds: (durationMill * 0.10).round()),
         )
         .thenTween(
           'y',
-          Tween(begin: -10.0, end: 10),
+          Tween(begin: -10.0, end: 10.0),
           duration: Duration(milliseconds: (durationMill * 0.10).round()),
         )
         .thenTween(
           'y',
-          Tween(begin: 10.0, end: -10),
+          Tween(begin: 10.0, end: -10.0),
           duration: Duration(milliseconds: (durationMill * 0.10).round()),
         )
         .thenTween(
           'y',
-          Tween(begin: -10.0, end: 10),
+          Tween(begin: -10.0, end: 10.0),
           duration: Duration(milliseconds: (durationMill * 0.10).round()),
         )
         .thenTween(
           'y',
-          Tween(begin: 10.0, end: -10),
+          Tween(begin: 10.0, end: -10.0),
           duration: Duration(milliseconds: (durationMill * 0.10).round()),
         )
         .thenTween(
           'y',
-          Tween(begin: -10.0, end: 10),
+          Tween(begin: -10.0, end: 10.0),
           duration: Duration(milliseconds: (durationMill * 0.10).round()),
         )
         .thenTween(
           'y',
-          Tween(begin: 10.0, end: -10),
+          Tween(begin: 10.0, end: -10.0),
           duration: Duration(milliseconds: (durationMill * 0.10).round()),
         )
         .thenTween(
           'y',
-          Tween(begin: -10.0, end: 10),
+          Tween(begin: -10.0, end: 10.0),
           duration: Duration(milliseconds: (durationMill * 0.10).round()),
         )
         .thenTween(
           'y',
-          Tween(begin: 10.0, end: -10),
+          Tween(begin: 10.0, end: -10.0),
           duration: Duration(milliseconds: (durationMill * 0.10).round()),
         )
         .thenTween(

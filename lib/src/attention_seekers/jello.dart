@@ -48,7 +48,7 @@ class _JelloState extends State<Jello> with SingleTickerProviderStateMixin {
     matrix
         .tween(
           'x',
-          Tween(begin: 1.0, end: -12.5),
+          Tween(begin: 0.0, end: -12.5),
           duration: Duration(milliseconds: (durationMill * 0.22).round()),
         )
         .thenTween(
@@ -83,48 +83,6 @@ class _JelloState extends State<Jello> with SingleTickerProviderStateMixin {
         )
         .thenTween(
           'x',
-          Tween(begin: -0.1953125, end: 0.0),
-          duration: Duration(milliseconds: (durationMill * 0.11).round()),
-        );
-
-    matrix
-        .tween(
-          'y',
-          Tween(begin: 1.0, end: -12.5),
-          duration: Duration(milliseconds: (durationMill * 0.22).round()),
-        )
-        .thenTween(
-          'y',
-          Tween(begin: -12.5, end: 6.25),
-          duration: Duration(milliseconds: (durationMill * 0.11).round()),
-        )
-        .thenTween(
-          'y',
-          Tween(begin: 6.25, end: -3.125),
-          duration: Duration(milliseconds: (durationMill * 0.11).round()),
-        )
-        .thenTween(
-          'y',
-          Tween(begin: -3.125, end: 1.5625),
-          duration: Duration(milliseconds: (durationMill * 0.11).round()),
-        )
-        .thenTween(
-          'y',
-          Tween(begin: 1.5625, end: -0.78125),
-          duration: Duration(milliseconds: (durationMill * 0.11).round()),
-        )
-        .thenTween(
-          'y',
-          Tween(begin: -0.78125, end: 0.390625),
-          duration: Duration(milliseconds: (durationMill * 0.11).round()),
-        )
-        .thenTween(
-          'y',
-          Tween(begin: 0.390625, end: -0.1953125),
-          duration: Duration(milliseconds: (durationMill * 0.11).round()),
-        )
-        .thenTween(
-          'y',
           Tween(begin: -0.1953125, end: 0.0),
           duration: Duration(milliseconds: (durationMill * 0.11).round()),
         );
