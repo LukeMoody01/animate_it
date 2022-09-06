@@ -3,7 +3,7 @@
 import 'package:flutter/material.dart';
 
 ///{@template zoom_in}
-/// A pulse effect
+/// A zoom in effect
 ///{@endtemplate}
 class ZoomIn extends StatefulWidget {
   ///{@macro zoom_in}

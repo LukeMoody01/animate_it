@@ -3,7 +3,7 @@
 import 'package:flutter/material.dart';
 
 ///{@template jello_in}
-/// A pulse effect
+/// A jello in effect
 ///{@endtemplate}
 class JelloIn extends StatefulWidget {
   ///{@macro jello_in}

@@ -377,7 +377,7 @@ class _PulseState extends State<Pulse> with SingleTickerProviderStateMixin {
 }
 
 ///{@template rubber_band}
-/// A pulse effect
+/// A rubber band effect
 ///{@endtemplate}
 class RubberBand extends StatefulWidget {
   ///{@macro rubber_band}

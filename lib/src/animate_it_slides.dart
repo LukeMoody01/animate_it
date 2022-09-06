@@ -3,7 +3,7 @@
 import 'package:flutter/material.dart';
 
 ///{@template slide_in_up}
-/// A pulse effect
+/// A slide in up effect
 ///{@endtemplate}
 class SlideInUp extends StatefulWidget {
   ///{@macro slide_in_up}

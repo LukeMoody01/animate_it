@@ -454,7 +454,7 @@ class FadeOutUpBig extends StatelessWidget {
 }
 
 ///{@template fade_out_left}
-/// A pulse effect
+/// A fade out left effect
 ///{@endtemplate}
 class FadeOutLeft extends StatefulWidget {
   ///{@macro fade_out_left}

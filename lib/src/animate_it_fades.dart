@@ -279,7 +279,7 @@ class FadeInDownBig extends StatelessWidget {
 }
 
 ///{@template fade_in_up}
-/// A pulse effect
+/// A fade in up effect
 ///{@endtemplate}
 class FadeInUp extends StatefulWidget {
   ///{@macro fade_in_up}
@@ -454,7 +454,7 @@ class FadeInUpBig extends StatelessWidget {
 }
 
 ///{@template fade_in_left}
-/// A pulse effect
+/// A fade in left effect
 ///{@endtemplate}
 class FadeInLeft extends StatefulWidget {
   ///{@macro fade_in_left}
@@ -568,7 +568,7 @@ class _FadeInLeftState extends State<FadeInLeft>
 }
 
 ///{@template fade_in_left_big}
-/// A pulse effect
+/// A fade in left big effect
 ///{@endtemplate}
 class FadeInLeftBig extends StatelessWidget {
   ///{@macro fade_in_left_big}
@@ -629,7 +629,7 @@ class FadeInLeftBig extends StatelessWidget {
 }
 
 ///{@template fade_in_right}
-/// A pulse effect
+/// A fade in right effect
 ///{@endtemplate}
 class FadeInRight extends StatefulWidget {
   ///{@macro fade_in_right}

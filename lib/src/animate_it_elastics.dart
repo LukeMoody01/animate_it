@@ -3,7 +3,7 @@
 import 'package:flutter/material.dart';
 
 ///{@template elastic_in}
-/// A pulse effect
+/// A elastic in effect
 ///{@endtemplate}
 class ElasticIn extends StatefulWidget {
   ///{@macro elastic_in}
@@ -114,7 +114,7 @@ class _ElasticInState extends State<ElasticIn>
 }
 
 ///{@template elastic_in_down}
-/// A pulse effect
+/// A elastic in down effect
 ///{@endtemplate}
 class ElasticInDown extends StatefulWidget {
   ///{@macro elastic_in_down}
@@ -250,7 +250,7 @@ class _ElasticInDownState extends State<ElasticInDown>
 }
 
 ///{@template elastic_in_up}
-/// A pulse effect
+/// A elastic in up effect
 ///{@endtemplate}
 class ElasticInUp extends StatelessWidget {
   ///{@macro elastic_in_up}
@@ -311,7 +311,7 @@ class ElasticInUp extends StatelessWidget {
 }
 
 ///{@template elastic_in_left}
-/// A pulse effect
+/// A elastic in left effect
 ///{@endtemplate}
 class ElasticInLeft extends StatefulWidget {
   ///{@macro elastic_in_left}
@@ -447,7 +447,7 @@ class _ElasticInLeftState extends State<ElasticInLeft>
 }
 
 ///{@template elastic_in_right}
-/// A pulse effect
+/// A elastic in right effect
 ///{@endtemplate}
 class ElasticInRight extends StatelessWidget {
   ///{@macro elastic_in_right}

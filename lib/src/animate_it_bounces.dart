@@ -175,7 +175,7 @@ class BounceInUp extends StatelessWidget {
 }
 
 ///{@template bounce_in_left}
-/// A pulse effect
+/// A bounce in left effect
 ///{@endtemplate}
 class BounceInLeft extends StatefulWidget {
   ///{@macro bounce_in_left}
