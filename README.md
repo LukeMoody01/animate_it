@@ -87,19 +87,15 @@ To see the road map, view the open [issues](https://github.com/LukeMoody01/anima
 ```
 home: Scaffold(
     body: Center(
-
         child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: <Widget>[
-
             FadeInLeft(child: Text('Left') ),
             FadeInUp(child: Text('Up') ),
             FadeInDown(child: Text('Down') ),
             FadeInRight(child: Text('Right') ),
-
-        ],
+            ],
         ),
-
     ),
 ),
 
