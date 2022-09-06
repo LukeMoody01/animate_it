@@ -105,5 +105,6 @@ home: Scaffold(
 
 ## TODO
 
-There is a lot of things I want to do with this package and they will be put into issues in the GitHub repo.
+Please note, A lot of these animations need work to be a bit more snappy and smooth.
+There is also a lot of things I want to do with this package and they will be put into issues in the GitHub repo.
 If you have any suggestions, please feel free to raise a ticket and I will take a look into it.
