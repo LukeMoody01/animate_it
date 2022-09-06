@@ -7,10 +7,10 @@ Since the original animate_do is not being maintained, I have decided to create 
 To see the road map, view the open [issues](https://github.com/LukeMoody01/animate_it/issues)
 
 ### Showcase
-| Demo1                  | Demo2                   | Demo3                       |
-| ---                       | ---                        | ---                          |
-|![](https://github.com/LukeMoody01/animate_it/blob/master/media/intro.gif)  | ![](https://github.com/LukeMoody01/animate_it/blob/master/media/list.gif)  | ![](https://github.com/LukeMoody01/animate_it/blob/master/media/grid.gif)  |
 
+| Demo1                                                                      | Demo2                                                                     | Demo3                                                                     |
+| -------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- |
+| ![](https://github.com/LukeMoody01/animate_it/blob/master/media/intro.gif) | ![](https://github.com/LukeMoody01/animate_it/blob/master/media/list.gif) | ![](https://github.com/LukeMoody01/animate_it/blob/master/media/grid.gif) |
 
 # Available **Animations**
 
@@ -101,16 +101,18 @@ To see the road map, view the open [issues](https://github.com/LukeMoody01/anima
 
 ## Example
 
+To use the animations, wrap any widget you want inside any animation widget (as seen below):
+
 ```
 home: Scaffold(
     body: Center(
         child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: <Widget>[
-            FadeInLeft(child: Text('Left') ),
-            FadeInUp(child: Text('Up') ),
-            FadeInDown(child: Text('Down') ),
-            FadeInRight(child: Text('Right') ),
+            LightSpeedInLeft(child: Text('Left')),
+            ShakeX(child: Text('ShakeX')),
+            ShakeY(child: Text('ShakeY')),
+            LightSpeedInRight(child: Text('Right')),
             ],
         ),
     ),
