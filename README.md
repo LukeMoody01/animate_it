@@ -2,85 +2,96 @@
 
 An animation package inspired by [animate_do](https://github.com/Klerith/animate_do_package) and [Animate.css](https://daneden.github.io/animate.css/).
 
-Since the original animate_do is not being maintained, I have decided to create this package that will add a LOT more animations including complex animations using Matrix4.
+Since the original animate_do is not being maintained, I have decided to create this package that will improve the current animations and add a LOT more animations including complex animations using Matrix4.
 
 To see the road map, view the open [issues](https://github.com/LukeMoody01/animate_it/issues)
 
 # Available **Animations**
 
-## FadeIn Animations
+## Attention Seeker
+
+- Bounce
+- Dance
+- Flash
+- Jello **NEW**
+- Pulse
+- Roulette
+- RubberBand **NEW**
+- ShakeX **NEW**
+- ShakeY **NEW**
+- Spin
+- SpinPerfect
+- Swing
+
+## Bouncing Entrances
+
+- BounceInDown
+- BounceInLeft
+- BounceInRight
+- BounceInUp
+
+## Elastic Entrances
+
+- ElasticIn
+- ElasticInDown
+- ElasticInLeft
+- ElasticInRight
+- ElasticInUp
+
+## Fading Entrances
 
 - FadeIn
 - FadeInDown
 - FadeInDownBig
-- FadeInUp
-- FadeInUpBig
 - FadeInLeft
 - FadeInLeftBig
 - FadeInRight
 - FadeInRightBig
+- FadeInUp
+- FadeInUpBig
 
-## FadeOut Animations
+## Fading Exits
 
 - FadeOut
 - FadeOutDown
 - FadeOutDownBig
-- FadeOutUp
-- FadeOutUpBig
 - FadeOutLeft
 - FadeOutLeftBig
 - FadeOutRight
 - FadeOutRightBig
+- FadeOutUp
+- FadeOutUpBig
 
-## BounceIn Animations
-
-- BounceInDown
-- BounceInUp
-- BounceInLeft
-- BounceInRight
-
-## ElasticIn Animations
-
-- ElasticIn
-- ElasticInDown
-- ElasticInUp
-- ElasticInLeft
-- ElasticInRight
-
-## SlideIns Animations
-
-- SlideInDown
-- SlideInUp
-- SlideInLeft
-- SlideInRight
-
-## FlipIn Animations
+## Flippers
 
 - FlipInX
 - FlipInY
 
-## Zooms
+## Lightspeed
 
-- ZoomIn
-- ZoomOut
+- LightspeedInLeft
+- LightspeedInRight
 
-## SpecialIn Animations
+## Sliding Entrances
+
+- SlideInDown
+- SlideInLeft
+- SlideInRight
+- SlideInUp
+
+## Specials
 
 - JelloIn
 
-## Attention Seeker
+## Zoom Entrances
 
-- Bounce
-- Flash
-- RubberBand **NEW**
-- ShakeX **NEW**
-- ShakeY **NEW**
-- Pulse
-- Swing
-- Spin
-- SpinPerfect
-- Dance
-- Roulette
+- ZoomIn
+
+## Zoom Exits
+
+- ZoomOut
+
+## More to come 💪
 
 ## Example
 
