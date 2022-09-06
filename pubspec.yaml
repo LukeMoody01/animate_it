@@ -1,0 +1,19 @@
+name: animate_it
+description: Beautiful animations inspired on animate_do Animate.css, every animation is a widget that contains default but customizable values that look attractive.
+version: 0.0.1
+homepage: https://github.com/LukeMoody01
+repository: https://github.com/LukeMoody01/animate_it
+
+environment:
+  sdk: ">=2.17.6 <3.0.0"
+  flutter: ">=1.17.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  simple_animations: ^5.0.0+2
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  very_good_analysis: ^3.0.1
