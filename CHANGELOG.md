@@ -1,3 +1,9 @@
+## 0.0.1+2
+
+- Updating documentation ✍️
+- Updating example ✍️
+- Folder/architecture structure cleanup 🧹
+
 ## 0.0.1+1
 
 - Updating documentation ✍️
