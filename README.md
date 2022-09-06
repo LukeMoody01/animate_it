@@ -2,7 +2,7 @@
 
 An animation package inspired by [animate_do](https://github.com/Klerith/animate_do_package) and [Animate.css](https://daneden.github.io/animate.css/).
 
-Since the original animate_do does not seem to be maintained, I have decided to create this package that will add even more animations including complex animations using Matrix4.
+Since the original animate_do is not being maintained, I have decided to create this package that will add even more animations including complex animations using Matrix4.
 
 # Available **Animations**
 
@@ -105,4 +105,5 @@ home: Scaffold(
 
 ## TODO
 
-There is a lot of things I want to do with this package
+There is a lot of things I want to do with this package and they will be put into issues in the GitHub repo.
+If you have any suggestions, please feel free to raise a ticket and I will take a look into it.

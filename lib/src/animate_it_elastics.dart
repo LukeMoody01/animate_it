@@ -36,7 +36,7 @@ class ElasticIn extends StatefulWidget {
   /// [delay]: delay before the animation starts
   final Duration delay;
 
-  /// [controller]: optional/mandatory, exposes the animation controller created by Animate_do
+  /// [controller]: optional/mandatory, exposes the animation controller created by animate_it
   /// the controller can be use to repeat, reverse and anything you want,
   /// its just an animation controller
   final void Function(AnimationController)? controller;
@@ -149,7 +149,7 @@ class ElasticInDown extends StatefulWidget {
   /// [delay]: delay before the animation starts
   final Duration delay;
 
-  /// [controller]: optional/mandatory, exposes the animation controller created by Animate_do
+  /// [controller]: optional/mandatory, exposes the animation controller created by animate_it
   /// the controller can be use to repeat, reverse and anything you want,
   /// its just an animation controller
   final void Function(AnimationController)? controller;
@@ -284,7 +284,7 @@ class ElasticInUp extends StatelessWidget {
   /// [delay]: delay before the animation starts
   final Duration delay;
 
-  /// [controller]: optional/mandatory, exposes the animation controller created by Animate_do
+  /// [controller]: optional/mandatory, exposes the animation controller created by animate_it
   /// the controller can be use to repeat, reverse and anything you want,
   /// its just an animation controller
   final void Function(AnimationController)? controller;
@@ -346,7 +346,7 @@ class ElasticInLeft extends StatefulWidget {
   /// [delay]: delay before the animation starts
   final Duration delay;
 
-  /// [controller]: optional/mandatory, exposes the animation controller created by Animate_do
+  /// [controller]: optional/mandatory, exposes the animation controller created by animate_it
   /// the controller can be use to repeat, reverse and anything you want,
   /// its just an animation controller
   final void Function(AnimationController)? controller;
@@ -481,7 +481,7 @@ class ElasticInRight extends StatelessWidget {
   /// [delay]: delay before the animation starts
   final Duration delay;
 
-  /// [controller]: optional/mandatory, exposes the animation controller created by Animate_do
+  /// [controller]: optional/mandatory, exposes the animation controller created by animate_it
   /// the controller can be use to repeat, reverse and anything you want,
   /// its just an animation controller
   final void Function(AnimationController)? controller;

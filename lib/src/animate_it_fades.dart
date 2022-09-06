@@ -36,7 +36,7 @@ class FadeIn extends StatefulWidget {
   /// [delay]: delay before the animation starts
   final Duration delay;
 
-  /// [controller]: optional/mandatory, exposes the animation controller created by Animate_do
+  /// [controller]: optional/mandatory, exposes the animation controller created by animate_it
   /// the controller can be use to repeat, reverse and anything you want,
   /// its just an animation controller
   final void Function(AnimationController)? controller;
@@ -136,7 +136,7 @@ class FadeInDown extends StatefulWidget {
   /// [delay]: delay before the animation starts
   final Duration delay;
 
-  /// [controller]: optional/mandatory, exposes the animation controller created by Animate_do
+  /// [controller]: optional/mandatory, exposes the animation controller created by animate_it
   /// the controller can be use to repeat, reverse and anything you want,
   /// its just an animation controller
   final void Function(AnimationController)? controller;
@@ -252,7 +252,7 @@ class FadeInDownBig extends StatelessWidget {
   /// [delay]: delay before the animation starts
   final Duration delay;
 
-  /// [controller]: optional/mandatory, exposes the animation controller created by Animate_do
+  /// [controller]: optional/mandatory, exposes the animation controller created by animate_it
   /// the controller can be use to repeat, reverse and anything you want,
   /// its just an animation controller
   final void Function(AnimationController)? controller;
@@ -313,7 +313,7 @@ class FadeInUp extends StatefulWidget {
   /// [delay]: delay before the animation starts
   final Duration delay;
 
-  /// [controller]: optional/mandatory, exposes the animation controller created by Animate_do
+  /// [controller]: optional/mandatory, exposes the animation controller created by animate_it
   /// the controller can be use to repeat, reverse and anything you want,
   /// its just an animation controller
   final void Function(AnimationController)? controller;
@@ -427,7 +427,7 @@ class FadeInUpBig extends StatelessWidget {
   /// [delay]: delay before the animation starts
   final Duration delay;
 
-  /// [controller]: optional/mandatory, exposes the animation controller created by Animate_do
+  /// [controller]: optional/mandatory, exposes the animation controller created by animate_it
   /// the controller can be use to repeat, reverse and anything you want,
   /// its just an animation controller
   final void Function(AnimationController)? controller;
@@ -488,7 +488,7 @@ class FadeInLeft extends StatefulWidget {
   /// [delay]: delay before the animation starts
   final Duration delay;
 
-  /// [controller]: optional/mandatory, exposes the animation controller created by Animate_do
+  /// [controller]: optional/mandatory, exposes the animation controller created by animate_it
   /// the controller can be use to repeat, reverse and anything you want,
   /// its just an animation controller
   final void Function(AnimationController)? controller;
@@ -602,7 +602,7 @@ class FadeInLeftBig extends StatelessWidget {
   /// [delay]: delay before the animation starts
   final Duration delay;
 
-  /// [controller]: optional/mandatory, exposes the animation controller created by Animate_do
+  /// [controller]: optional/mandatory, exposes the animation controller created by animate_it
   /// the controller can be use to repeat, reverse and anything you want,
   /// its just an animation controller
   final void Function(AnimationController)? controller;
@@ -663,7 +663,7 @@ class FadeInRight extends StatefulWidget {
   /// [delay]: delay before the animation starts
   final Duration delay;
 
-  /// [controller]: optional/mandatory, exposes the animation controller created by Animate_do
+  /// [controller]: optional/mandatory, exposes the animation controller created by animate_it
   /// the controller can be use to repeat, reverse and anything you want,
   /// its just an animation controller
   final void Function(AnimationController)? controller;
@@ -775,7 +775,7 @@ class FadeInRightBig extends StatelessWidget {
   /// [delay]: delay before the animation starts
   final Duration delay;
 
-  /// [controller]: optional/mandatory, exposes the animation controller created by Animate_do
+  /// [controller]: optional/mandatory, exposes the animation controller created by animate_it
   /// the controller can be use to repeat, reverse and anything you want,
   /// its just an animation controller
   final void Function(AnimationController)? controller;

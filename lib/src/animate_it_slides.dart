@@ -37,7 +37,7 @@ class SlideInUp extends StatefulWidget {
   /// [delay]: delay before the animation starts
   final Duration delay;
 
-  /// [controller]: optional/mandatory, exposes the animation controller created by Animate_do
+  /// [controller]: optional/mandatory, exposes the animation controller created by animate_it
   /// the controller can be use to repeat, reverse and anything you want,
   /// its just an animation controller
   final void Function(AnimationController)? controller;
@@ -144,7 +144,7 @@ class SlideInDown extends StatelessWidget {
   /// [delay]: delay before the animation starts
   final Duration delay;
 
-  /// [controller]: optional/mandatory, exposes the animation controller created by Animate_do
+  /// [controller]: optional/mandatory, exposes the animation controller created by animate_it
   /// the controller can be use to repeat, reverse and anything you want,
   /// its just an animation controller
   final void Function(AnimationController)? controller;
@@ -205,7 +205,7 @@ class SlideInLeft extends StatefulWidget {
   /// [delay]: delay before the animation starts
   final Duration delay;
 
-  /// [controller]: optional/mandatory, exposes the animation controller created by Animate_do
+  /// [controller]: optional/mandatory, exposes the animation controller created by animate_it
   /// the controller can be use to repeat, reverse and anything you want,
   /// its just an animation controller
   final void Function(AnimationController)? controller;
@@ -312,7 +312,7 @@ class SlideInRight extends StatelessWidget {
   /// [delay]: delay before the animation starts
   final Duration delay;
 
-  /// [controller]: optional/mandatory, exposes the animation controller created by Animate_do
+  /// [controller]: optional/mandatory, exposes the animation controller created by animate_it
   /// the controller can be use to repeat, reverse and anything you want,
   /// its just an animation controller
   final void Function(AnimationController)? controller;
