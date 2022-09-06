@@ -6,6 +6,12 @@ Since the original animate_do is not being maintained, I have decided to create 
 
 To see the road map, view the open [issues](https://github.com/LukeMoody01/animate_it/issues)
 
+### Showcase
+| Demo1                  | Demo2                   | Demo3                       |
+| ---                       | ---                        | ---                          |
+|![](https://github.com/LukeMoody01/animate_it/blob/master/media/intro.gif)  | ![](https://github.com/LukeMoody01/animate_it/blob/master/media/list.gif)  | ![](https://github.com/LukeMoody01/animate_it/blob/master/media/grid.gif)  |
+
+
 # Available **Animations**
 
 ## Attention Seeker
