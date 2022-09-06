@@ -1,40 +1,58 @@
+// ignore_for_file: use_super_parameters
+
 import 'package:flutter/material.dart';
 
-/// Class [SlideInUp]:
-/// [key]: optional widget key reference
-/// [child]: mandatory, widget to animate
-/// [duration]: how much time the animation should take
-/// [delay]: delay before the animation starts
-/// [controller]: optional/mandatory, exposes the animation controller created by Animate_do
-/// the controller can be use to repeat, reverse and anything you want, its just an animation controller
+///{@template slide_in_up}
+/// A pulse effect
+///{@endtemplate}
 class SlideInUp extends StatefulWidget {
-  final Widget child;
-  final Duration duration;
-  final Duration delay;
-  final Function(AnimationController)? controller;
-  final bool manualTrigger;
-  final bool animate;
-  final double from;
-
-  SlideInUp(
-      {key,
-      required this.child,
-      this.duration = const Duration(milliseconds: 600),
-      this.delay = const Duration(milliseconds: 0),
-      this.controller,
-      this.manualTrigger = false,
-      this.animate = true,
-      this.from = 100})
-      : super(key: key) {
+  ///{@macro slide_in_up}
+  SlideInUp({
+    Key? key,
+    required this.child,
+    this.duration = const Duration(milliseconds: 600),
+    this.delay = Duration.zero,
+    this.controller,
+    this.manualTrigger = false,
+    this.animate = true,
+    this.from = 100,
+  }) : super(key: key) {
     if (manualTrigger == true && controller == null) {
-      throw FlutterError('If you want to use manualTrigger:true, \n\n'
-          'Then you must provide the controller property, that is a callback like:\n\n'
-          ' ( controller: AnimationController) => yourController = controller \n\n');
+      throw FlutterError(
+        'If you want to use manualTrigger:true, \n\n'
+        'Then you must provide the controller property, that is a '
+        'callback like: \n\n'
+        ' ( controller: AnimationController) => yourController = controller '
+        '\n\n',
+      );
     }
   }
 
+  /// [child]: mandatory, widget to animate
+  final Widget child;
+
+  /// [duration]: how much time the animation should take
+  final Duration duration;
+
+  /// [delay]: delay before the animation starts
+  final Duration delay;
+
+  /// [controller]: optional/mandatory, exposes the animation controller created by Animate_do
+  /// the controller can be use to repeat, reverse and anything you want,
+  /// its just an animation controller
+  final void Function(AnimationController)? controller;
+
+  /// [manualTrigger]: whether the animation should animate by default
+  final bool manualTrigger;
+
+  /// [animate]: whether the animation should animate by default
+  final bool animate;
+
+  /// [from]: from where you want to start the animation
+  final double from;
+
   @override
-  _SlideInUpState createState() => _SlideInUpState();
+  State<SlideInUp> createState() => _SlideInUpState();
 }
 
 /// State class, where the magic happens
@@ -80,94 +98,129 @@ class _SlideInUpState extends State<SlideInUp>
     }
 
     return AnimatedBuilder(
-        animation: controller!,
-        builder: (BuildContext context, Widget? child) {
-          return Transform.translate(
-              offset: Offset(0, animation.value), child: widget.child);
-        });
+      animation: controller!,
+      builder: (BuildContext context, Widget? child) {
+        return Transform.translate(
+          offset: Offset(0, animation.value),
+          child: widget.child,
+        );
+      },
+    );
   }
 }
 
-/// Class [SlideInDown]:
-/// [key]: optional widget key reference
-/// [child]: mandatory, widget to animate
-/// [duration]: how much time the animation should take
-/// [delay]: delay before the animation starts
-/// [controller]: optional/mandatory, exposes the animation controller created by Animate_do
-/// the controller can be use to repeat, reverse and anything you want, its just an animation controller
+///{@template slide_in_down}
+/// A slide in down effect
+///{@endtemplate}
 class SlideInDown extends StatelessWidget {
-  final Widget child;
-  final Duration duration;
-  final Duration delay;
-  final Function(AnimationController)? controller;
-  final bool manualTrigger;
-  final bool animate;
-  final double from;
-
-  SlideInDown(
-      {key,
-      required this.child,
-      this.duration = const Duration(milliseconds: 600),
-      this.delay = const Duration(milliseconds: 0),
-      this.controller,
-      this.manualTrigger = false,
-      this.animate = true,
-      this.from = 100})
-      : super(key: key) {
+  ///{@macro slide_in_down}
+  SlideInDown({
+    Key? key,
+    required this.child,
+    this.duration = const Duration(milliseconds: 600),
+    this.delay = Duration.zero,
+    this.controller,
+    this.manualTrigger = false,
+    this.animate = true,
+    this.from = 100,
+  }) : super(key: key) {
     if (manualTrigger == true && controller == null) {
-      throw FlutterError('If you want to use manualTrigger:true, \n\n'
-          'Then you must provide the controller property, that is a callback like:\n\n'
-          ' ( controller: AnimationController) => yourController = controller \n\n');
+      throw FlutterError(
+        'If you want to use manualTrigger:true, \n\n'
+        'Then you must provide the controller property, that is a '
+        'callback like: \n\n'
+        ' ( controller: AnimationController) => yourController = controller '
+        '\n\n',
+      );
     }
   }
 
+  /// [child]: mandatory, widget to animate
+  final Widget child;
+
+  /// [duration]: how much time the animation should take
+  final Duration duration;
+
+  /// [delay]: delay before the animation starts
+  final Duration delay;
+
+  /// [controller]: optional/mandatory, exposes the animation controller created by Animate_do
+  /// the controller can be use to repeat, reverse and anything you want,
+  /// its just an animation controller
+  final void Function(AnimationController)? controller;
+
+  /// [manualTrigger]: whether the animation should animate by default
+  final bool manualTrigger;
+
+  /// [animate]: whether the animation should animate by default
+  final bool animate;
+
+  /// [from]: from where you want to start the animation
+  final double from;
+
   @override
   Widget build(BuildContext context) => SlideInUp(
-        child: child,
         duration: duration,
         delay: delay,
         controller: controller,
         manualTrigger: manualTrigger,
         animate: animate,
         from: from * -1,
+        child: child,
       );
 }
 
-/// Class [SlideInLeft]:
-/// [key]: optional widget key reference
-/// [child]: mandatory, widget to animate
-/// [duration]: how much time the animation should take
-/// [delay]: delay before the animation starts
-/// [controller]: optional/mandatory, exposes the animation controller created by Animate_do
-/// the controller can be use to repeat, reverse and anything you want, its just an animation controller
+///{@template slide_in_left}
+/// A slide in left effect
+///{@endtemplate}
 class SlideInLeft extends StatefulWidget {
-  final Widget child;
-  final Duration duration;
-  final Duration delay;
-  final Function(AnimationController)? controller;
-  final bool manualTrigger;
-  final bool animate;
-  final double from;
-
-  SlideInLeft(
-      {key,
-      required this.child,
-      this.duration = const Duration(milliseconds: 600),
-      this.delay = const Duration(milliseconds: 0),
-      this.controller,
-      this.manualTrigger = false,
-      this.animate = true,
-      this.from = 100})
-      : super(key: key) {
+  ///{@macro slide_in_left}
+  SlideInLeft({
+    Key? key,
+    required this.child,
+    this.duration = const Duration(milliseconds: 600),
+    this.delay = Duration.zero,
+    this.controller,
+    this.manualTrigger = false,
+    this.animate = true,
+    this.from = 100,
+  }) : super(key: key) {
     if (manualTrigger == true && controller == null) {
-      throw FlutterError('If you want to use manualTrigger:true, \n\n'
-          'Then you must provide the controller property, that is a callback like:\n\n'
-          ' ( controller: AnimationController) => yourController = controller \n\n');
+      throw FlutterError(
+        'If you want to use manualTrigger:true, \n\n'
+        'Then you must provide the controller property, that is a '
+        'callback like: \n\n'
+        ' ( controller: AnimationController) => yourController = controller '
+        '\n\n',
+      );
     }
   }
 
+  /// [child]: mandatory, widget to animate
+  final Widget child;
+
+  /// [duration]: how much time the animation should take
+  final Duration duration;
+
+  /// [delay]: delay before the animation starts
+  final Duration delay;
+
+  /// [controller]: optional/mandatory, exposes the animation controller created by Animate_do
+  /// the controller can be use to repeat, reverse and anything you want,
+  /// its just an animation controller
+  final void Function(AnimationController)? controller;
+
+  /// [manualTrigger]: whether the animation should animate by default
+  final bool manualTrigger;
+
+  /// [animate]: whether the animation should animate by default
+  final bool animate;
+
+  /// [from]: from where you want to start the animation
+  final double from;
+
   @override
-  _SlideInLeftState createState() => _SlideInLeftState();
+  State<SlideInLeft> createState() => _SlideInLeftState();
 }
 
 /// State class, where the magic happens
@@ -213,55 +266,74 @@ class _SlideInLeftState extends State<SlideInLeft>
     }
 
     return AnimatedBuilder(
-        animation: controller!,
-        builder: (BuildContext context, Widget? child) {
-          return Transform.translate(
-              offset: Offset(animation.value, 0), child: widget.child);
-        });
+      animation: controller!,
+      builder: (BuildContext context, Widget? child) {
+        return Transform.translate(
+          offset: Offset(animation.value, 0),
+          child: widget.child,
+        );
+      },
+    );
   }
 }
 
-/// Class [SlideInRight]:
-/// [key]: optional widget key reference
-/// [child]: mandatory, widget to animate
-/// [duration]: how much time the animation should take
-/// [delay]: delay before the animation starts
-/// [controller]: optional/mandatory, exposes the animation controller created by Animate_do
-/// the controller can be use to repeat, reverse and anything you want, its just an animation controller
+///{@template slide_in_right}
+/// A slide in right effect
+///{@endtemplate}
 class SlideInRight extends StatelessWidget {
-  final Widget child;
-  final Duration duration;
-  final Duration delay;
-  final Function(AnimationController)? controller;
-  final bool manualTrigger;
-  final bool animate;
-  final double from;
-
-  SlideInRight(
-      {key,
-      required this.child,
-      this.duration = const Duration(milliseconds: 600),
-      this.delay = const Duration(milliseconds: 0),
-      this.controller,
-      this.manualTrigger = false,
-      this.animate = true,
-      this.from = 100})
-      : super(key: key) {
+  ///{@macro slide_in_right}
+  SlideInRight({
+    Key? key,
+    required this.child,
+    this.duration = const Duration(milliseconds: 600),
+    this.delay = Duration.zero,
+    this.controller,
+    this.manualTrigger = false,
+    this.animate = true,
+    this.from = 100,
+  }) : super(key: key) {
     if (manualTrigger == true && controller == null) {
-      throw FlutterError('If you want to use manualTrigger:true, \n\n'
-          'Then you must provide the controller property, that is a callback like:\n\n'
-          ' ( controller: AnimationController) => yourController = controller \n\n');
+      throw FlutterError(
+        'If you want to use manualTrigger:true, \n\n'
+        'Then you must provide the controller property, that is a '
+        'callback like: \n\n'
+        ' ( controller: AnimationController) => yourController = controller '
+        '\n\n',
+      );
     }
   }
 
+  /// [child]: mandatory, widget to animate
+  final Widget child;
+
+  /// [duration]: how much time the animation should take
+  final Duration duration;
+
+  /// [delay]: delay before the animation starts
+  final Duration delay;
+
+  /// [controller]: optional/mandatory, exposes the animation controller created by Animate_do
+  /// the controller can be use to repeat, reverse and anything you want,
+  /// its just an animation controller
+  final void Function(AnimationController)? controller;
+
+  /// [manualTrigger]: whether the animation should animate by default
+  final bool manualTrigger;
+
+  /// [animate]: whether the animation should animate by default
+  final bool animate;
+
+  /// [from]: from where you want to start the animation
+  final double from;
+
   @override
   Widget build(BuildContext context) => SlideInLeft(
-        child: child,
         duration: duration,
         delay: delay,
         controller: controller,
         manualTrigger: manualTrigger,
         animate: animate,
         from: from * -1,
+        child: child,
       );
 }
