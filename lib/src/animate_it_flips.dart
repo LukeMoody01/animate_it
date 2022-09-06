@@ -1,38 +1,54 @@
+// ignore_for_file: use_super_parameters, prefer_int_literals
+
 import 'package:flutter/material.dart';
 
-/// Class [FlipInX]:
-/// [key]: optional widget key reference
-/// [child]: mandatory, widget to animate
-/// [duration]: how much time the animation should take
-/// [delay]: delay before the animation starts
-/// [controller]: optional/mandatory, exposes the animation controller created by Animate_do
-/// the controller can be use to repeat, reverse and anything you want, its just an animation controller
+///{@template flip_in_x}
+/// A flip in x effect
+///{@endtemplate}
 class FlipInX extends StatefulWidget {
-  final Widget child;
-  final Duration duration;
-  final Duration delay;
-  final Function(AnimationController)? controller;
-  final bool manualTrigger;
-  final bool animate;
-
+  ///{@macro flip_in_x}
   FlipInX({
-    key,
+    Key? key,
     required this.child,
     this.duration = const Duration(milliseconds: 800),
-    this.delay = const Duration(milliseconds: 0),
+    this.delay = Duration.zero,
     this.controller,
     this.manualTrigger = false,
     this.animate = true,
   }) : super(key: key) {
     if (manualTrigger == true && controller == null) {
-      throw FlutterError('If you want to use manualTrigger:true, \n\n'
-          'Then you must provide the controller property, that is a callback like:\n\n'
-          ' ( controller: AnimationController) => yourController = controller \n\n');
+      throw FlutterError(
+        'If you want to use manualTrigger:true, \n\n'
+        'Then you must provide the controller property, that is a '
+        'callback like: \n\n'
+        ' ( controller: AnimationController) => yourController = controller '
+        '\n\n',
+      );
     }
   }
 
+  /// [child]: mandatory, widget to animate
+  final Widget child;
+
+  /// [duration]: how much time the animation should take
+  final Duration duration;
+
+  /// [delay]: delay before the animation starts
+  final Duration delay;
+
+  /// [controller]: optional/mandatory, exposes the animation controller created by Animate_do
+  /// the controller can be use to repeat, reverse and anything you want,
+  /// its just an animation controller
+  final void Function(AnimationController)? controller;
+
+  /// [manualTrigger]: whether the animation should animate by default
+  final bool manualTrigger;
+
+  /// [animate]: whether the animation should animate by default
+  final bool animate;
+
   @override
-  _FlipInXState createState() => _FlipInXState();
+  State<FlipInX> createState() => _FlipInXState();
 }
 
 /// State class, where the magic happens
@@ -59,7 +75,8 @@ class _FlipInXState extends State<FlipInX> with SingleTickerProviderStateMixin {
         .animate(CurvedAnimation(parent: controller!, curve: Curves.bounceOut));
 
     opacity = Tween<double>(begin: 0, end: 1).animate(
-        CurvedAnimation(parent: controller!, curve: const Interval(0, 0.65)));
+      CurvedAnimation(parent: controller!, curve: const Interval(0, 0.65)),
+    );
 
     if (!widget.manualTrigger && widget.animate) {
       Future.delayed(widget.delay, () {
@@ -81,52 +98,68 @@ class _FlipInXState extends State<FlipInX> with SingleTickerProviderStateMixin {
     }
 
     return AnimatedBuilder(
-        animation: controller!,
-        builder: (BuildContext context, Widget? child) {
-          return Transform(
-              alignment: FractionalOffset.center,
-              transform: Matrix4.identity()..rotateX(rotation.value),
-              child: Opacity(
-                opacity: opacity.value,
-                child: widget.child,
-              ));
-        });
+      animation: controller!,
+      builder: (BuildContext context, Widget? child) {
+        return Transform(
+          alignment: FractionalOffset.center,
+          transform: Matrix4.identity()..rotateX(rotation.value),
+          child: Opacity(
+            opacity: opacity.value,
+            child: widget.child,
+          ),
+        );
+      },
+    );
   }
 }
 
-/// Class [FlipInY]:
-/// [key]: optional widget key reference
-/// [child]: mandatory, widget to animate
-/// [duration]: how much time the animation should take
-/// [delay]: delay before the animation starts
-/// [controller]: optional/mandatory, exposes the animation controller created by Animate_do
-/// the controller can be use to repeat, reverse and anything you want, its just an animation controller
+///{@template flip_in_y}
+/// A flip in y effect
+///{@endtemplate}
 class FlipInY extends StatefulWidget {
-  final Widget child;
-  final Duration duration;
-  final Duration delay;
-  final Function(AnimationController)? controller;
-  final bool manualTrigger;
-  final bool animate;
-
+  ///{@macro flip_in_y}
   FlipInY({
-    key,
+    Key? key,
     required this.child,
     this.duration = const Duration(milliseconds: 800),
-    this.delay = const Duration(milliseconds: 0),
+    this.delay = Duration.zero,
     this.controller,
     this.manualTrigger = false,
     this.animate = true,
   }) : super(key: key) {
     if (manualTrigger == true && controller == null) {
-      throw FlutterError('If you want to use manualTrigger:true, \n\n'
-          'Then you must provide the controller property, that is a callback like:\n\n'
-          ' ( controller: AnimationController) => yourController = controller \n\n');
+      throw FlutterError(
+        'If you want to use manualTrigger:true, \n\n'
+        'Then you must provide the controller property, that is a '
+        'callback like: \n\n'
+        ' ( controller: AnimationController) => yourController = controller '
+        '\n\n',
+      );
     }
   }
 
+  /// [child]: mandatory, widget to animate
+  final Widget child;
+
+  /// [duration]: how much time the animation should take
+  final Duration duration;
+
+  /// [delay]: delay before the animation starts
+  final Duration delay;
+
+  /// [controller]: optional/mandatory, exposes the animation controller created by Animate_do
+  /// the controller can be use to repeat, reverse and anything you want,
+  /// its just an animation controller
+  final void Function(AnimationController)? controller;
+
+  /// [manualTrigger]: whether the animation should animate by default
+  final bool manualTrigger;
+
+  /// [animate]: whether the animation should animate by default
+  final bool animate;
+
   @override
-  _FlipInYState createState() => _FlipInYState();
+  State<FlipInY> createState() => _FlipInYState();
 }
 
 /// State class, where the magic happens
@@ -153,7 +186,8 @@ class _FlipInYState extends State<FlipInY> with SingleTickerProviderStateMixin {
         .animate(CurvedAnimation(parent: controller!, curve: Curves.bounceOut));
 
     opacity = Tween<double>(begin: 0, end: 1).animate(
-        CurvedAnimation(parent: controller!, curve: const Interval(0, 0.65)));
+      CurvedAnimation(parent: controller!, curve: const Interval(0, 0.65)),
+    );
 
     if (!widget.manualTrigger && widget.animate) {
       Future.delayed(widget.delay, () {
@@ -175,15 +209,17 @@ class _FlipInYState extends State<FlipInY> with SingleTickerProviderStateMixin {
     }
 
     return AnimatedBuilder(
-        animation: controller!,
-        builder: (BuildContext context, Widget? child) {
-          return Transform(
-              alignment: FractionalOffset.center,
-              transform: Matrix4.identity()..rotateY(rotation.value),
-              child: Opacity(
-                opacity: opacity.value,
-                child: widget.child,
-              ));
-        });
+      animation: controller!,
+      builder: (BuildContext context, Widget? child) {
+        return Transform(
+          alignment: FractionalOffset.center,
+          transform: Matrix4.identity()..rotateY(rotation.value),
+          child: Opacity(
+            opacity: opacity.value,
+            child: widget.child,
+          ),
+        );
+      },
+    );
   }
 }
