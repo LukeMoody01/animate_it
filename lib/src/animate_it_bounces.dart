@@ -1,40 +1,58 @@
+// ignore_for_file: use_super_parameters
+
 import 'package:flutter/material.dart';
 
-/// Class [BounceInDown]:
-/// [key]: optional widget key reference
-/// [child]: mandatory, widget to animate
-/// [duration]: how much time the animation should take
-/// [delay]: delay before the animation starts
-/// [controller]: optional/mandatory, exposes the animation controller created by Animate_do
-/// the controller can be use to repeat, reverse and anything you want, its just an animation controller
+///{@template bounce_in_down}
+/// A bounce in down effect
+///{@endtemplate}
 class BounceInDown extends StatefulWidget {
-  final Widget child;
-  final Duration duration;
-  final Duration delay;
-  final Function(AnimationController)? controller;
-  final bool manualTrigger;
-  final bool animate;
-  final double from;
-
-  BounceInDown(
-      {key,
-      required this.child,
-      this.duration = const Duration(milliseconds: 1000),
-      this.delay = const Duration(milliseconds: 0),
-      this.controller,
-      this.manualTrigger = false,
-      this.animate = true,
-      this.from = 75})
-      : super(key: key) {
+  ///{@macro bounce_in_down}
+  BounceInDown({
+    Key? key,
+    required this.child,
+    this.duration = const Duration(milliseconds: 1000),
+    this.delay = Duration.zero,
+    this.controller,
+    this.manualTrigger = false,
+    this.animate = true,
+    this.from = 75,
+  }) : super(key: key) {
     if (manualTrigger == true && controller == null) {
-      throw FlutterError('If you want to use manualTrigger:true, \n\n'
-          'Then you must provide the controller property, that is a callback like:\n\n'
-          ' ( controller: AnimationController) => yourController = controller \n\n');
+      throw FlutterError(
+        'If you want to use manualTrigger:true, \n\n'
+        'Then you must provide the controller property, that is a '
+        'callback like: \n\n'
+        ' ( controller: AnimationController) => yourController = controller '
+        '\n\n',
+      );
     }
   }
 
+  /// [child]: mandatory, widget to animate
+  final Widget child;
+
+  /// [duration]: how much time the animation should take
+  final Duration duration;
+
+  /// [delay]: delay before the animation starts
+  final Duration delay;
+
+  /// [controller]: optional/mandatory, exposes the animation controller created by Animate_do
+  /// the controller can be use to repeat, reverse and anything you want,
+  /// its just an animation controller
+  final void Function(AnimationController)? controller;
+
+  /// [manualTrigger]: whether the animation should animate by default
+  final bool manualTrigger;
+
+  /// [animate]: whether the animation should animate by default
+  final bool animate;
+
+  /// [from]: from where you want to start the animation
+  final double from;
+
   @override
-  _BounceInDownState createState() => _BounceInDownState();
+  State<BounceInDown> createState() => _BounceInDownState();
 }
 
 /// Bounce class State, this is where the magic happens
@@ -58,7 +76,8 @@ class _BounceInDownState extends State<BounceInDown>
     controller = AnimationController(duration: widget.duration, vsync: this);
 
     opacity = Tween<double>(begin: 0, end: 1).animate(
-        CurvedAnimation(parent: controller!, curve: const Interval(0, 0.65)));
+      CurvedAnimation(parent: controller!, curve: const Interval(0, 0.65)),
+    );
 
     animation = Tween<double>(begin: widget.from * -1, end: 0)
         .animate(CurvedAnimation(parent: controller!, curve: Curves.bounceOut));
@@ -83,95 +102,129 @@ class _BounceInDownState extends State<BounceInDown>
     }
 
     return AnimatedBuilder(
-        animation: controller!,
-        builder: (BuildContext context, Widget? child) {
-          return Transform.translate(
-              offset: Offset(0, animation.value),
-              child: Opacity(opacity: opacity.value, child: widget.child));
-        });
+      animation: controller!,
+      builder: (BuildContext context, Widget? child) {
+        return Transform.translate(
+          offset: Offset(0, animation.value),
+          child: Opacity(opacity: opacity.value, child: widget.child),
+        );
+      },
+    );
   }
 }
 
-/// Class [BounceInUp]:
-/// [key]: optional widget key reference
-/// [child]: mandatory, widget to animate
-/// [duration]: how much time the animation should take
-/// [delay]: delay before the animation starts
-/// [controller]: optional/mandatory, exposes the animation controller created by Animate_do
-/// the controller can be use to repeat, reverse and anything you want, its just an animation controller
+///{@template bounce_in_up}
+/// A bounce in up effect
+///{@endtemplate}
 class BounceInUp extends StatelessWidget {
-  final Widget child;
-  final Duration duration;
-  final Duration delay;
-  final Function(AnimationController)? controller;
-  final bool manualTrigger;
-  final bool animate;
-  final double from;
-
-  BounceInUp(
-      {key,
-      required this.child,
-      this.duration = const Duration(milliseconds: 1000),
-      this.delay = const Duration(milliseconds: 0),
-      this.controller,
-      this.manualTrigger = false,
-      this.animate = true,
-      this.from = 75})
-      : super(key: key) {
+  ///{@macro bounce_in_up}
+  BounceInUp({
+    Key? key,
+    required this.child,
+    this.duration = const Duration(milliseconds: 1000),
+    this.delay = Duration.zero,
+    this.controller,
+    this.manualTrigger = false,
+    this.animate = true,
+    this.from = 75,
+  }) : super(key: key) {
     if (manualTrigger == true && controller == null) {
-      throw FlutterError('If you want to use manualTrigger:true, \n\n'
-          'Then you must provide the controller property, that is a callback like:\n\n'
-          ' ( controller: AnimationController) => yourController = controller \n\n');
+      throw FlutterError(
+        'If you want to use manualTrigger:true, \n\n'
+        'Then you must provide the controller property, that is a '
+        'callback like: \n\n'
+        ' ( controller: AnimationController) => yourController = controller '
+        '\n\n',
+      );
     }
   }
 
+  /// [child]: mandatory, widget to animate
+  final Widget child;
+
+  /// [duration]: how much time the animation should take
+  final Duration duration;
+
+  /// [delay]: delay before the animation starts
+  final Duration delay;
+
+  /// [controller]: optional/mandatory, exposes the animation controller created by Animate_do
+  /// the controller can be use to repeat, reverse and anything you want,
+  /// its just an animation controller
+  final void Function(AnimationController)? controller;
+
+  /// [manualTrigger]: whether the animation should animate by default
+  final bool manualTrigger;
+
+  /// [animate]: whether the animation should animate by default
+  final bool animate;
+
+  /// [from]: from where you want to start the animation
+  final double from;
+
   @override
   Widget build(BuildContext context) => BounceInDown(
-        child: child,
         duration: duration,
         delay: delay,
         controller: controller,
         manualTrigger: manualTrigger,
         animate: animate,
         from: from * -1,
+        child: child,
       );
 }
 
-/// Class [BounceInLeft]:
-/// [key]: optional widget key reference
-/// [child]: mandatory, widget to animate
-/// [duration]: how much time the animation should take
-/// [delay]: delay before the animation starts
-/// [controller]: optional/mandatory, exposes the animation controller created by Animate_do
-/// the controller can be use to repeat, reverse and anything you want, its just an animation controller
+///{@template bounce_in_left}
+/// A pulse effect
+///{@endtemplate}
 class BounceInLeft extends StatefulWidget {
-  final Widget child;
-  final Duration duration;
-  final Duration delay;
-  final Function(AnimationController)? controller;
-  final bool manualTrigger;
-  final bool animate;
-  final double from;
-
-  BounceInLeft(
-      {key,
-      required this.child,
-      this.duration = const Duration(milliseconds: 1000),
-      this.delay = const Duration(milliseconds: 0),
-      this.controller,
-      this.manualTrigger = false,
-      this.animate = true,
-      this.from = 75})
-      : super(key: key) {
+  ///{@macro bounce_in_left}
+  BounceInLeft({
+    Key? key,
+    required this.child,
+    this.duration = const Duration(milliseconds: 1000),
+    this.delay = Duration.zero,
+    this.controller,
+    this.manualTrigger = false,
+    this.animate = true,
+    this.from = 75,
+  }) : super(key: key) {
     if (manualTrigger == true && controller == null) {
-      throw FlutterError('If you want to use manualTrigger:true, \n\n'
-          'Then you must provide the controller property, that is a callback like:\n\n'
-          ' ( controller: AnimationController) => yourController = controller \n\n');
+      throw FlutterError(
+        'If you want to use manualTrigger:true, \n\n'
+        'Then you must provide the controller property, that is a '
+        'callback like: \n\n'
+        ' ( controller: AnimationController) => yourController = controller '
+        '\n\n',
+      );
     }
   }
 
+  /// [child]: mandatory, widget to animate
+  final Widget child;
+
+  /// [duration]: how much time the animation should take
+  final Duration duration;
+
+  /// [delay]: delay before the animation starts
+  final Duration delay;
+
+  /// [controller]: optional/mandatory, exposes the animation controller created by Animate_do
+  /// the controller can be use to repeat, reverse and anything you want,
+  /// its just an animation controller
+  final void Function(AnimationController)? controller;
+
+  /// [manualTrigger]: whether the animation should animate by default
+  final bool manualTrigger;
+
+  /// [animate]: whether the animation should animate by default
+  final bool animate;
+
+  /// [from]: from where you want to start the animation
+  final double from;
+
   @override
-  _BounceInLeftState createState() => _BounceInLeftState();
+  State<BounceInLeft> createState() => _BounceInLeftState();
 }
 
 /// Bounce class State, this is where the magic happens
@@ -194,7 +247,8 @@ class _BounceInLeftState extends State<BounceInLeft>
 
     controller = AnimationController(duration: widget.duration, vsync: this);
     opacity = Tween<double>(begin: 0, end: 1).animate(
-        CurvedAnimation(parent: controller!, curve: const Interval(0, 0.65)));
+      CurvedAnimation(parent: controller!, curve: const Interval(0, 0.65)),
+    );
 
     animation = Tween<double>(begin: widget.from * -1, end: 0)
         .animate(CurvedAnimation(parent: controller!, curve: Curves.bounceOut));
@@ -219,59 +273,77 @@ class _BounceInLeftState extends State<BounceInLeft>
     }
 
     return AnimatedBuilder(
-        animation: controller!,
-        builder: (BuildContext context, Widget? child) {
-          return Transform.translate(
-              offset: Offset(animation.value, 0),
-              child: Opacity(
-                opacity: opacity.value,
-                child: widget.child,
-              ));
-        });
+      animation: controller!,
+      builder: (BuildContext context, Widget? child) {
+        return Transform.translate(
+          offset: Offset(animation.value, 0),
+          child: Opacity(
+            opacity: opacity.value,
+            child: widget.child,
+          ),
+        );
+      },
+    );
   }
 }
 
-/// Class [BounceInRight]:
-/// [key]: optional widget key reference
-/// [child]: mandatory, widget to animate
-/// [duration]: how much time the animation should take
-/// [delay]: delay before the animation starts
-/// [controller]: optional/mandatory, exposes the animation controller created by Animate_do
-/// the controller can be use to repeat, reverse and anything you want, its just an animation controller
+///{@template bounce_in_right}
+/// A bounce in right effect
+///{@endtemplate}
 class BounceInRight extends StatelessWidget {
-  final Widget child;
-  final Duration duration;
-  final Duration delay;
-  final Function(AnimationController)? controller;
-  final bool manualTrigger;
-  final bool animate;
-  final double from;
-
-  BounceInRight(
-      {key,
-      required this.child,
-      this.duration = const Duration(milliseconds: 1000),
-      this.delay = const Duration(milliseconds: 0),
-      this.controller,
-      this.manualTrigger = false,
-      this.animate = true,
-      this.from = 75})
-      : super(key: key) {
+  ///{@macro bounce_in_right}
+  BounceInRight({
+    Key? key,
+    required this.child,
+    this.duration = const Duration(milliseconds: 1000),
+    this.delay = Duration.zero,
+    this.controller,
+    this.manualTrigger = false,
+    this.animate = true,
+    this.from = 75,
+  }) : super(key: key) {
     if (manualTrigger == true && controller == null) {
-      throw FlutterError('If you want to use manualTrigger:true, \n\n'
-          'Then you must provide the controller property, that is a callback like:\n\n'
-          ' ( controller: AnimationController) => yourController = controller \n\n');
+      throw FlutterError(
+        'If you want to use manualTrigger:true, \n\n'
+        'Then you must provide the controller property, that is a '
+        'callback like: \n\n'
+        ' ( controller: AnimationController) => yourController = controller '
+        '\n\n',
+      );
     }
   }
 
+  /// [child]: mandatory, widget to animate
+  final Widget child;
+
+  /// [duration]: how much time the animation should take
+  final Duration duration;
+
+  /// [delay]: delay before the animation starts
+  final Duration delay;
+
+  /// [controller]: optional/mandatory, exposes the animation controller created by Animate_do
+  /// the controller can be use to repeat, reverse and anything you want,
+  /// its just an animation controller
+  final void Function(AnimationController)? controller;
+
+  /// [manualTrigger]: whether the animation should animate by default
+  final bool manualTrigger;
+
+  /// [animate]: whether the animation should animate by default
+  final bool animate;
+
+  /// [from]: from where you want to start the animation
+  final double from;
+
   @override
   Widget build(BuildContext context) => BounceInLeft(
-        child: child,
         duration: duration,
         delay: delay,
         controller: controller,
         manualTrigger: manualTrigger,
         animate: animate,
         from: from * -1,
+        child: child,
       );
 }
