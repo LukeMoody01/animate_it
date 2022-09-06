@@ -4,6 +4,8 @@ An animation package inspired by [animate_do](https://github.com/Klerith/animate
 
 Since the original animate_do is not being maintained, I have decided to create this package that will add a LOT more animations including complex animations using Matrix4.
 
+To see the road map, view the open [issues](https://github.com/LukeMoody01/animate_it/issues)
+
 # Available **Animations**
 
 ## FadeIn Animations
