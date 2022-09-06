@@ -91,7 +91,7 @@ To see the road map, view the open [issues](https://github.com/LukeMoody01/anima
 
 - ZoomOut
 
-## More to come 💪
+### More to come 💪
 
 ## Example
 
