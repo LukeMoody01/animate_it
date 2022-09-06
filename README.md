@@ -1,39 +1,108 @@
-<!-- 
-This README describes the package. If you publish this package to pub.dev,
-this README's contents appear on the landing page for your package.
+# animate_it
 
-For information about how to write a good package README, see the guide for
-[writing package pages](https://dart.dev/guides/libraries/writing-package-pages). 
+An animation package inspired by [animate_do](https://github.com/Klerith/animate_do_package) and [Animate.css](https://daneden.github.io/animate.css/).
 
-For general information about developing packages, see the Dart guide for
-[creating packages](https://dart.dev/guides/libraries/create-library-packages)
-and the Flutter guide for
-[developing packages and plugins](https://flutter.dev/developing-packages). 
--->
+Since the original animate_do does not seem to be maintained, I have decided to create this package that will add even more animations including complex animations using Matrix4.
 
-TODO: Put a short description of the package here that helps potential users
-know whether this package might be useful for them.
+# Available **Animations**
 
-## Features
+## FadeIn Animations
 
-TODO: List what your package can do. Maybe include images, gifs, or videos.
+- FadeIn
+- FadeInDown
+- FadeInDownBig
+- FadeInUp
+- FadeInUpBig
+- FadeInLeft
+- FadeInLeftBig
+- FadeInRight
+- FadeInRightBig
 
-## Getting started
+## FadeOut Animations
 
-TODO: List prerequisites and provide or point to information on how to
-start using the package.
+- FadeOut
+- FadeOutDown
+- FadeOutDownBig
+- FadeOutUp
+- FadeOutUpBig
+- FadeOutLeft
+- FadeOutLeftBig
+- FadeOutRight
+- FadeOutRightBig
 
-## Usage
+## BounceIn Animations
 
-TODO: Include short and useful examples for package users. Add longer examples
-to `/example` folder. 
+- BounceInDown
+- BounceInUp
+- BounceInLeft
+- BounceInRight
 
-```dart
-const like = 'sample';
+## ElasticIn Animations
+
+- ElasticIn
+- ElasticInDown
+- ElasticInUp
+- ElasticInLeft
+- ElasticInRight
+
+## SlideIns Animations
+
+- SlideInDown
+- SlideInUp
+- SlideInLeft
+- SlideInRight
+
+## FlipIn Animations
+
+- FlipInX
+- FlipInY
+
+## Zooms
+
+- ZoomIn
+- ZoomOut
+
+## SpecialIn Animations
+
+- JelloIn
+
+## Attention Seeker
+
+- Bounce
+- Flash
+- RubberBand **NEW**
+- ShakeX **NEW**
+- ShakeY **NEW**
+- Pulse
+- Swing
+- Spin
+- SpinPerfect
+- Dance
+- Roulette
+
+## Example
+
+```
+home: Scaffold(
+    body: Center(
+
+        child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceAround,
+        children: <Widget>[
+
+            FadeInLeft(child: Text('Left') ),
+            FadeInUp(child: Text('Up') ),
+            FadeInDown(child: Text('Down') ),
+            FadeInRight(child: Text('Right') ),
+
+        ],
+        ),
+
+    ),
+),
+
 ```
 
-## Additional information
+## TODO
 
-TODO: Tell users more about the package: where to find more information, how to 
-contribute to the package, how to file issues, what response they can expect 
-from the package authors, and more.
+There is a lot of things I want to do with this package
