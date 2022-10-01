@@ -1,4 +1,6 @@
-# animate_it
+# animate_it (Discontinued)
+
+I am discontinung this package as there is a far better alernative: https://pub.dev/packages/flutter_animate. I would highly recommend checking that package out instead 🙂
 
 An animation package inspired by [animate_do](https://github.com/Klerith/animate_do_package) and [Animate.css](https://daneden.github.io/animate.css/).
 
